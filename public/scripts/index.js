@@ -13,6 +13,7 @@ rtc.on('add remote stream', function(stream){
 });
 
 // more rtc callbacks are available
-document.onload = function() {
+
+function setVolume() {
   document.getElementById("local").volume = 0;
 }
