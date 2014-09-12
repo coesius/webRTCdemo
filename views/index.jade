@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  video#local(autoplay="autoplay")
+  video#remote(autoplay="autoplay")
+  script(src="/scripts/webrtc.io.js")
+  script(scr="/scripts/index.js")
