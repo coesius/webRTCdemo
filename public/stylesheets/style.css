@@ -11,6 +11,6 @@ a {
   display: none;
 }
 
-div {
+video {
   transform: scaleX(-1);
 }
