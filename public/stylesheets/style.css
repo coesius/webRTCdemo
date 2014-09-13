@@ -8,5 +8,9 @@ a {
 }
 
 .index {
-	display: none;
+  display: none;
+}
+
+div {
+  transform: scaleX(-1);
 }
