@@ -80,13 +80,13 @@ if (navigator.webkitGetUserMedia) {
     if (navigator.mozGetUserMedia) {
       return {
         "iceServers": [{
-          "url": "stun:23.21.150.121"
+          "url": "stun:104.131.51.239"
         }]
       };
     }
     return {
       "iceServers": [{
-        "url": "stun:stun.l.google.com:19302"
+        "url": "stun:104.131.51.239"
       }]
     };
   };
