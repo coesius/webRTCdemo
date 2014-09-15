@@ -2,7 +2,7 @@
 // (ie. probably not `localhost`)
 rtc.connect('ws://104.131.51.239:8001', "live");
 
-rtc.createStream({"video": false, "audio": true}, function(stream){
+rtc.createStream({"video": true, "audio": true}, function(stream){
   // get local stream for manipulation
   rtc.attachStream(stream, 'local');
 });
