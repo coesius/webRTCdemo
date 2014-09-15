@@ -11,7 +11,7 @@ router.get('/admin', function(req, res) {
 });
 
 router.get('/chat', function(req, res) {
-  res.render('admin');
+  res.render('admin', { title: 'webRTCdemo' });
 });
 
 module.exports = router;
