@@ -11,7 +11,7 @@ router.get('/admin', function(req, res) {
 });
 
 router.get('/chat', function(req, res) {
-  res.render('chat', {});
+  res.render('admin');
 });
 
 module.exports = router;
