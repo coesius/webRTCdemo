@@ -1,6 +1,6 @@
 // note: make sure hostname available to all connecting clients
 // (ie. probably not `localhost`)
-rtc.connect('ws://104.131.51.239:8001');
+rtc.connect('ws://104.131.51.239:8001', "live");
 
 rtc.createStream({"video": false, "audio": true}, function(stream){
   // get local stream for manipulation
