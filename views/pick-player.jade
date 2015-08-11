@@ -4,4 +4,7 @@
 	form.form-horizontal
 		.form-group(ng-repeat="player in playerList track by $index", ng-hide="player.picked")
 			.col-sm-12
-				input.btn.btn-primary.form-control(tpye="submit", value="{{player.nickname}}", ng-click="pickPlayer($index)")
+				button.btn.btn-primary.form-control(ng-click="pickPlayer($index)")="{{player.nickname}}"
+		.form-group
+			.col-sm-12
+				button.btn.btn-primary.form-control(ng-click="restart()")="重新开始"

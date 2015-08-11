@@ -1,0 +1,16 @@
+.modal-header
+	h3.modal-title="选择目标"
+.modal-body
+	form.form-horizontal
+		.form-group(ng-repeat="player in playerList track by $index")
+			.col-sm-12
+				input.btn.btn-primary.form-control(tpye="submit", value="{{player.nickname}}", ng-click="targetPlayer($index)", ng-disabled='!player.alive')
+		.form-group
+			.col-sm-12
+				input.btn.btn-primary.form-control(type="submit", value="弃权", ng-click="targetPlayer(-1)")
+		.form-group
+			.col-sm-12
+				input.btn.btn-primary.form-control(type="submit", value="查看记录", ng-click="showLog()")
+		.form-group
+			.col-sm-12
+				input.btn.btn-primary.form-control(type="submit", value="重新开始", ng-click="restart()")

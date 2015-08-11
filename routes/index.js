@@ -34,4 +34,8 @@ router.get('/closeeye/pick-player', function(req, res) {
   res.render('pick-player');
 });
 
+router.get('/closeeye/closeeye-gaming', function(req, res) {
+  res.render('closeeye-gaming');
+});
+
 module.exports = router;
