@@ -1,0 +1,28 @@
+.modal-header
+	h3.modal-title="游戏设定"
+.modal-body
+	form.form-horizontal(ng-submit="create_game()")
+		.form-group
+			.col-sm-12
+				input.form-control(type="number", placeholder="玩家数量", ng-model="playerNum", ng-change="changePlayerNum()")
+		.form-group
+			.col-sm-12
+				input.form-control(type="number", placeholder="警察数量", ng-model="policeNum")
+		.form-group
+			.col-sm-12
+				input.form-control(type="number", placeholder="杀手数量", ng-model="killerNum")
+		.form-group
+			.col-sm-6.checkbox
+				label
+					input(type="checkbox", ng-model="doctor")
+					span="医生"
+			.col-sm-6.checkbox
+				label
+					input(type="checkbox", ng-model="sniper")
+					span="狙击手"
+		.form-group(ng-repeat="player in playerList track by $index")
+			.col-sm-12
+				input.form-control(placeholder="玩家名称", ng-model="playerList[$index].nickname")
+		.form-group
+			.col-sm-12
+				input.btn.btn-primary.form-control(tpye="submit", value="创建房间", ng-click="create_room()")

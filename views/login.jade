@@ -1,0 +1,15 @@
+.modal-header
+	h3.modal-title="创建/加入房间"
+.modal-body
+	form.form-horizontal(ng-submit="join()")
+		.form-group
+			.col-sm-12
+				input.form-control(placeholder="昵称", ng-model="nickname")
+		.form-group
+			.col-sm-12
+				button.btn.btn-primary.form-control(ng-click="create_room()")="创建房间"
+		.form-group
+			.col-sm-6
+				input.form-control(placeholder="房间号码", ng-model="room_id")
+			.col-sm-6
+				input.btn.btn-primary.form-control(type="submit", value="加入房间")

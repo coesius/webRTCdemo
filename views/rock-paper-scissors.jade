@@ -1,0 +1,19 @@
+doctype html
+
+html(ng-app="RPS")
+	head
+		script(src="/scripts/jquery-2.1.4.min.js")
+		script(src="/scripts/angular.min.js")
+		script(src="/scripts/ui-bootstrap-tpls-0.13.2.min.js")
+		script(src="/scripts/socket.io.js")
+		script(src="/scripts/RPSCtrl.js")
+		link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
+	body
+		.container(ng-controller="gameCtrl")
+			.row
+				h3.col-lg-2="玩家列表："
+			.row(ng-repeat="nickname in playerList track by $index")
+				.col-lg-2
+					{{nickname}}
+			.row
+				h4.col-lg-2="房间编号：{{room_id}}"

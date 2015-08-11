@@ -1,0 +1,7 @@
+.modal-header
+	h3.modal-title="选择身份"
+.modal-body
+	form.form-horizontal
+		.form-group(ng-repeat="player in playerList track by $index", ng-hide="player.picked")
+			.col-sm-12
+				input.btn.btn-primary.form-control(tpye="submit", value="{{player.nickname}}", ng-click="pickPlayer($index)")

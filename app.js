@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var webRTC = require('webrtc.io').listen(8001);
+var RPSServer = require('./private_modules/RPSServer')();
+var CloseEyeServer = require('./private_modules/closeEyeServer')();
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
